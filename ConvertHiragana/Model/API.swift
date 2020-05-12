@@ -22,7 +22,6 @@ class HiraganaAPI {
 
     func convertToHiragana(sentence: String, completion: @escaping (String?) -> Void) {
         parameters["sentence"] = sentence
-        print(parameters["sentence"] as Any)
 
         AF.request(url, method: .post, parameters: parameters).responseJSON { (responce) in
             switch responce.result {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B01E32A3246A968700C67874 /* SecretToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01E32A2246A968700C67874 /* SecretToken.swift */; };
 		B0288845246A8CFE0039C0B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0288844246A8CFE0039C0B3 /* AppDelegate.swift */; };
 		B0288847246A8CFE0039C0B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0288846246A8CFE0039C0B3 /* SceneDelegate.swift */; };
 		B0288849246A8CFE0039C0B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0288848246A8CFE0039C0B3 /* ViewController.swift */; };
@@ -28,6 +29,7 @@
 /* Begin PBXFileReference section */
 		0175682F7FD2E21D3D3551C3 /* Pods-ConvertHiragana.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConvertHiragana.release.xcconfig"; path = "Target Support Files/Pods-ConvertHiragana/Pods-ConvertHiragana.release.xcconfig"; sourceTree = "<group>"; };
 		1D580147FC881F2B7FDBA5A9 /* Pods_ConvertHiragana.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ConvertHiragana.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B01E32A2246A968700C67874 /* SecretToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretToken.swift; sourceTree = "<group>"; };
 		B0288841246A8CFE0039C0B3 /* ConvertHiragana.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConvertHiragana.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0288844246A8CFE0039C0B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B0288846246A8CFE0039C0B3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				B028884F246A8D010039C0B3 /* LaunchScreen.storyboard */,
 				B0288852246A8D010039C0B3 /* Info.plist */,
 				B028886E246A93BA0039C0B3 /* SecretToken.swift */,
+				B01E32A2246A968700C67874 /* SecretToken.swift */,
 			);
 			path = ConvertHiragana;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B01E32A3246A968700C67874 /* SecretToken.swift in Sources */,
 				B028886D246A93950039C0B3 /* API.swift in Sources */,
 				B0288849246A8CFE0039C0B3 /* ViewController.swift in Sources */,
 				B028885F246A90380039C0B3 /* FirstView.swift in Sources */,
