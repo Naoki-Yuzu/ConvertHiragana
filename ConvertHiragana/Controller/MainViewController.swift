@@ -11,6 +11,7 @@ import UIKit
 class MainViewController: UIViewController {
     
     //MARK: - Properties
+    private let hiraganaAPI = HiraganaAPI()
     
     private let mainView: MainView = {
         let view = MainView()
@@ -41,7 +42,20 @@ class MainViewController: UIViewController {
 extension MainViewController: MainViewDelegate {
     
     func convertToHiragana() {
-        
+        let willconvertText = mainView.textView.text
+        hiraganaAPI.convertToHiragana(sentence: willconvertText!) { convertedText in
+            if convertedText != nil {
+                let convertedViewController = ConvertedViewController()
+                convertedViewController.convertedView.textLabel.text = convertedText
+                convertedViewController.modalPresentationStyle = .fullScreen
+                self.present(convertedViewController, animated: true, completion: nil)
+            } else {
+                let convertedViewController = ConvertedViewController()
+                convertedViewController.convertedView.descriptionLabel.text = "変換できませんでした"
+                convertedViewController.modalPresentationStyle = .fullScreen
+                self.present(convertedViewController, animated: true, completion: nil)
+            }
+        }
     }
     
     func showAlert() {

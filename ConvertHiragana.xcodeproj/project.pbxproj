@@ -20,6 +20,8 @@
 		B0288867246A90760039C0B3 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0288866246A90760039C0B3 /* FirstViewController.swift */; };
 		B0288869246A90820039C0B3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0288868246A90820039C0B3 /* MainViewController.swift */; };
 		B028886B246A90940039C0B3 /* ConvertedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B028886A246A90940039C0B3 /* ConvertedViewController.swift */; };
+		B028886D246A93950039C0B3 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = B028886C246A93950039C0B3 /* API.swift */; };
+		B028886F246A93BA0039C0B3 /* SecretToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = B028886E246A93BA0039C0B3 /* SecretToken.swift */; };
 		C695157BB04C744B2B03E156 /* Pods_ConvertHiragana.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D580147FC881F2B7FDBA5A9 /* Pods_ConvertHiragana.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +43,8 @@
 		B0288866246A90760039C0B3 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		B0288868246A90820039C0B3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B028886A246A90940039C0B3 /* ConvertedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertedViewController.swift; sourceTree = "<group>"; };
+		B028886C246A93950039C0B3 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		B028886E246A93BA0039C0B3 /* SecretToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretToken.swift; sourceTree = "<group>"; };
 		CA0D501D7F94C6FD00B75EE5 /* Pods-ConvertHiragana.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConvertHiragana.debug.xcconfig"; path = "Target Support Files/Pods-ConvertHiragana/Pods-ConvertHiragana.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,6 +109,7 @@
 				B028884D246A8D010039C0B3 /* Assets.xcassets */,
 				B028884F246A8D010039C0B3 /* LaunchScreen.storyboard */,
 				B0288852246A8D010039C0B3 /* Info.plist */,
+				B028886E246A93BA0039C0B3 /* SecretToken.swift */,
 			);
 			path = ConvertHiragana;
 			sourceTree = "<group>";
@@ -132,6 +137,7 @@
 		B028885C246A8FEF0039C0B3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B028886C246A93950039C0B3 /* API.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -259,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B028886D246A93950039C0B3 /* API.swift in Sources */,
 				B0288849246A8CFE0039C0B3 /* ViewController.swift in Sources */,
 				B028885F246A90380039C0B3 /* FirstView.swift in Sources */,
 				B0288845246A8CFE0039C0B3 /* AppDelegate.swift in Sources */,
@@ -269,6 +276,7 @@
 				B0288869246A90820039C0B3 /* MainViewController.swift in Sources */,
 				B0288847246A8CFE0039C0B3 /* SceneDelegate.swift in Sources */,
 				B0288865246A90650039C0B3 /* Extensions.swift in Sources */,
+				B028886F246A93BA0039C0B3 /* SecretToken.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
