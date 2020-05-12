@@ -20,20 +20,17 @@ class ConvertedViewController: UIViewController{
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         configureUI()
     }
     
     //MARK: - Helpers
     func configureUI() {
-        
         navigationController?.navigationBar.isHidden = true
         view.addSubview(convertedView)
         convertedView.delegate = self
         convertedView.addConstraintsToFillView(view)
     }
     
-    //MARK: Selectors
 }
 
 // MARK: - ConvertedViewDelegate

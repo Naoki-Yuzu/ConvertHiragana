@@ -6,7 +6,6 @@
 //  Copyright © 2020 Naoki-Yuzu. All rights reserved.
 //
 
-
 import Alamofire
 import SwiftyJSON
 

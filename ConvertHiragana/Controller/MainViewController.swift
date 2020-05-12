@@ -25,7 +25,6 @@ class MainViewController: UIViewController {
         configureUI()
     }
     
-    
     //MARK: - Helpers
     func configureUI() {
         navigationController?.navigationBar.isHidden = true
@@ -33,8 +32,6 @@ class MainViewController: UIViewController {
         mainView.delegate = self
         mainView.addConstraintsToFillView(view)
     }
-    
-    //MARK: - Selectors
     
 }
 
@@ -44,9 +41,10 @@ extension MainViewController: MainViewDelegate {
     func convertToHiragana() {
         let willconvertText = mainView.textView.text
         hiraganaAPI.convertToHiragana(sentence: willconvertText!) { convertedText in
+            // ひらがなに変換できたら文字を表示する。できなかったら文字は表示せず、変換できなかったことを伝える。
             if convertedText != nil {
                 let convertedViewController = ConvertedViewController()
-                convertedViewController.convertedView.textLabel.text = convertedText
+                convertedViewController.convertedView.textView.text = convertedText
                 convertedViewController.modalPresentationStyle = .fullScreen
                 self.present(convertedViewController, animated: true, completion: nil)
             } else {
@@ -61,7 +59,6 @@ extension MainViewController: MainViewDelegate {
     func showAlert() {
         let alertController: UIAlertController = UIAlertController(title: "エラー", message: "文字が入力されていません", preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "ok", style: .default, handler: nil))
-        
         present(alertController, animated: true, completion: nil)
     }
     
