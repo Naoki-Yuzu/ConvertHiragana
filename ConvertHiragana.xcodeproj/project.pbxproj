@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,13 @@
 		B028884C246A8CFE0039C0B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B028884A246A8CFE0039C0B3 /* Main.storyboard */; };
 		B028884E246A8D010039C0B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B028884D246A8D010039C0B3 /* Assets.xcassets */; };
 		B0288851246A8D010039C0B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B028884F246A8D010039C0B3 /* LaunchScreen.storyboard */; };
+		B028885F246A90380039C0B3 /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B028885E246A90380039C0B3 /* FirstView.swift */; };
+		B0288861246A90450039C0B3 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0288860246A90450039C0B3 /* MainView.swift */; };
+		B0288863246A90530039C0B3 /* ConvertedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0288862246A90530039C0B3 /* ConvertedView.swift */; };
+		B0288865246A90650039C0B3 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0288864246A90650039C0B3 /* Extensions.swift */; };
+		B0288867246A90760039C0B3 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0288866246A90760039C0B3 /* FirstViewController.swift */; };
+		B0288869246A90820039C0B3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0288868246A90820039C0B3 /* MainViewController.swift */; };
+		B028886B246A90940039C0B3 /* ConvertedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B028886A246A90940039C0B3 /* ConvertedViewController.swift */; };
 		C695157BB04C744B2B03E156 /* Pods_ConvertHiragana.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D580147FC881F2B7FDBA5A9 /* Pods_ConvertHiragana.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +34,13 @@
 		B028884D246A8D010039C0B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B0288850246A8D010039C0B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B0288852246A8D010039C0B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B028885E246A90380039C0B3 /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
+		B0288860246A90450039C0B3 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		B0288862246A90530039C0B3 /* ConvertedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertedView.swift; sourceTree = "<group>"; };
+		B0288864246A90650039C0B3 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		B0288866246A90760039C0B3 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		B0288868246A90820039C0B3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		B028886A246A90940039C0B3 /* ConvertedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertedViewController.swift; sourceTree = "<group>"; };
 		CA0D501D7F94C6FD00B75EE5 /* Pods-ConvertHiragana.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConvertHiragana.debug.xcconfig"; path = "Target Support Files/Pods-ConvertHiragana/Pods-ConvertHiragana.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,7 +70,6 @@
 				CA0D501D7F94C6FD00B75EE5 /* Pods-ConvertHiragana.debug.xcconfig */,
 				0175682F7FD2E21D3D3551C3 /* Pods-ConvertHiragana.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -81,6 +94,10 @@
 		B0288843246A8CFE0039C0B3 /* ConvertHiragana */ = {
 			isa = PBXGroup;
 			children = (
+				B028885D246A8FF20039C0B3 /* Utilities */,
+				B028885C246A8FEF0039C0B3 /* Model */,
+				B028885B246A8FED0039C0B3 /* View */,
+				B028885A246A8FEB0039C0B3 /* Controller */,
 				B0288844246A8CFE0039C0B3 /* AppDelegate.swift */,
 				B0288846246A8CFE0039C0B3 /* SceneDelegate.swift */,
 				B0288848246A8CFE0039C0B3 /* ViewController.swift */,
@@ -90,6 +107,41 @@
 				B0288852246A8D010039C0B3 /* Info.plist */,
 			);
 			path = ConvertHiragana;
+			sourceTree = "<group>";
+		};
+		B028885A246A8FEB0039C0B3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B0288866246A90760039C0B3 /* FirstViewController.swift */,
+				B0288868246A90820039C0B3 /* MainViewController.swift */,
+				B028886A246A90940039C0B3 /* ConvertedViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B028885B246A8FED0039C0B3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B028885E246A90380039C0B3 /* FirstView.swift */,
+				B0288860246A90450039C0B3 /* MainView.swift */,
+				B0288862246A90530039C0B3 /* ConvertedView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B028885C246A8FEF0039C0B3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B028885D246A8FF20039C0B3 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B0288864246A90650039C0B3 /* Extensions.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,8 +260,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0288849246A8CFE0039C0B3 /* ViewController.swift in Sources */,
+				B028885F246A90380039C0B3 /* FirstView.swift in Sources */,
 				B0288845246A8CFE0039C0B3 /* AppDelegate.swift in Sources */,
+				B0288867246A90760039C0B3 /* FirstViewController.swift in Sources */,
+				B0288863246A90530039C0B3 /* ConvertedView.swift in Sources */,
+				B028886B246A90940039C0B3 /* ConvertedViewController.swift in Sources */,
+				B0288861246A90450039C0B3 /* MainView.swift in Sources */,
+				B0288869246A90820039C0B3 /* MainViewController.swift in Sources */,
 				B0288847246A8CFE0039C0B3 /* SceneDelegate.swift in Sources */,
+				B0288865246A90650039C0B3 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
