@@ -13,9 +13,12 @@
 		B028884C246A8CFE0039C0B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B028884A246A8CFE0039C0B3 /* Main.storyboard */; };
 		B028884E246A8D010039C0B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B028884D246A8D010039C0B3 /* Assets.xcassets */; };
 		B0288851246A8D010039C0B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B028884F246A8D010039C0B3 /* LaunchScreen.storyboard */; };
+		C695157BB04C744B2B03E156 /* Pods_ConvertHiragana.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D580147FC881F2B7FDBA5A9 /* Pods_ConvertHiragana.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0175682F7FD2E21D3D3551C3 /* Pods-ConvertHiragana.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConvertHiragana.release.xcconfig"; path = "Target Support Files/Pods-ConvertHiragana/Pods-ConvertHiragana.release.xcconfig"; sourceTree = "<group>"; };
+		1D580147FC881F2B7FDBA5A9 /* Pods_ConvertHiragana.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ConvertHiragana.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0288841246A8CFE0039C0B3 /* ConvertHiragana.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConvertHiragana.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0288844246A8CFE0039C0B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B0288846246A8CFE0039C0B3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		B028884D246A8D010039C0B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B0288850246A8D010039C0B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B0288852246A8D010039C0B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA0D501D7F94C6FD00B75EE5 /* Pods-ConvertHiragana.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConvertHiragana.debug.xcconfig"; path = "Target Support Files/Pods-ConvertHiragana/Pods-ConvertHiragana.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C695157BB04C744B2B03E156 /* Pods_ConvertHiragana.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8CD404D99DAF1D0876DF8AE4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D580147FC881F2B7FDBA5A9 /* Pods_ConvertHiragana.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A58B8CD593022ECBE43B9619 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CA0D501D7F94C6FD00B75EE5 /* Pods-ConvertHiragana.debug.xcconfig */,
+				0175682F7FD2E21D3D3551C3 /* Pods-ConvertHiragana.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B0288838246A8CFE0039C0B3 = {
 			isa = PBXGroup;
 			children = (
 				B0288843246A8CFE0039C0B3 /* ConvertHiragana */,
 				B0288842246A8CFE0039C0B3 /* Products */,
+				A58B8CD593022ECBE43B9619 /* Pods */,
+				8CD404D99DAF1D0876DF8AE4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B0288855246A8D010039C0B3 /* Build configuration list for PBXNativeTarget "ConvertHiragana" */;
 			buildPhases = (
+				E283A76C9FEF42C76C1E9F72 /* [CP] Check Pods Manifest.lock */,
 				B028883D246A8CFE0039C0B3 /* Sources */,
 				B028883E246A8CFE0039C0B3 /* Frameworks */,
 				B028883F246A8CFE0039C0B3 /* Resources */,
+				C9054CE7161F9B93A3E84FB7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C9054CE7161F9B93A3E84FB7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ConvertHiragana/Pods-ConvertHiragana-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ConvertHiragana/Pods-ConvertHiragana-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ConvertHiragana/Pods-ConvertHiragana-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E283A76C9FEF42C76C1E9F72 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ConvertHiragana-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B028883D246A8CFE0039C0B3 /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		B0288856246A8D010039C0B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA0D501D7F94C6FD00B75EE5 /* Pods-ConvertHiragana.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +369,7 @@
 		};
 		B0288857246A8D010039C0B3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0175682F7FD2E21D3D3551C3 /* Pods-ConvertHiragana.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
