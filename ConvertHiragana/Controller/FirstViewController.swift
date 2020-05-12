@@ -31,12 +31,13 @@ class FirstViewController: UIViewController {
         firstView.addConstraintsToFillView(view)
     }
 
-
 }
 
 // MARK: - FirstViewDelegate
 extension FirstViewController: FirstViewDelegate {
+    
     func goToNextView() {
         navigationController?.pushViewController(MainViewController(), animated: true)
     }
+    
 }

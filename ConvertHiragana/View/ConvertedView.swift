@@ -8,6 +8,7 @@
 
 import UIKit
 
+// MARK: - Protocols
 protocol ConvertedViewDelegate {
     
     func backToPreviousView()
@@ -25,13 +26,13 @@ class ConvertedView: UIView {
         return label
     }()
     
-    let textLabel: UILabel = {
-        let label = UILabel()
-        label.backgroundColor = .slateGray
-        label.textColor = .white
-        label.layer.cornerRadius  = 10
-        label.clipsToBounds = true
-        return label
+    let textView: UITextView = {
+        let tv = UITextView()
+        tv.font = UIFont.systemFont(ofSize: 20)
+        tv.backgroundColor = .slateGray
+        tv.layer.cornerRadius = 10
+        tv.textColor = .white
+        return tv
     }()
     
     private lazy var backButton: UIButton = {
@@ -46,13 +47,9 @@ class ConvertedView: UIView {
     
     var delegate: ConvertedViewDelegate?
     
-    var convetedCharacters: String = ""
-    
-    
     //MARK: - Lifecycle
     override init(frame: CGRect) {
         super.init(frame: CGRect())
-        
         configureUI()
     }
     
@@ -64,10 +61,10 @@ class ConvertedView: UIView {
     func configureUI() {
         self.addSubview(descriptionLabel)
         descriptionLabel.anchor(top: self.safeAreaLayoutGuide.topAnchor, left: self.safeAreaLayoutGuide.leftAnchor, right: self.safeAreaLayoutGuide.rightAnchor, paddingTop: 50, paddingLeft: 50, paddingRight: 50, height: 50)
-        self.addSubview(textLabel)
-        textLabel.anchor(top: descriptionLabel.bottomAnchor, left: safeAreaLayoutGuide.leftAnchor, right: self.safeAreaLayoutGuide.rightAnchor, paddingTop: 50, paddingLeft: 50, paddingRight: 50, height: 150)
+        self.addSubview(textView)
+        textView.anchor(top: descriptionLabel.bottomAnchor, left: safeAreaLayoutGuide.leftAnchor, right: self.safeAreaLayoutGuide.rightAnchor, paddingTop: 50, paddingLeft: 50, paddingRight: 50, height: 100)
         self.addSubview(backButton)
-        backButton.anchor(top: textLabel.bottomAnchor, left: safeAreaLayoutGuide.leftAnchor, right: self.safeAreaLayoutGuide.rightAnchor, paddingTop: 50, paddingLeft: 50, paddingRight: 50, height: 50)
+        backButton.anchor(top: textView.bottomAnchor, left: safeAreaLayoutGuide.leftAnchor, right: self.safeAreaLayoutGuide.rightAnchor, paddingTop: 50, paddingLeft: 50, paddingRight: 50, height: 50)
     }
     
     //MARK: - Selectors

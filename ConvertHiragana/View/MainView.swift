@@ -8,6 +8,7 @@
 
 import UIKit
 
+// MARK: - Protocols
 protocol MainViewDelegate {
     
     func convertToHiragana()
@@ -21,7 +22,7 @@ class MainView: UIView {
     //MARK: - Properties
     private let descriptionLabel: UILabel = {
         let label = UILabel()
-        label.text = "ひらがなに変換したい文字を入力してください"
+        label.text = "ひらがなに変換できます"
         label.textAlignment = .center
         label.font = UIFont.boldSystemFont(ofSize: 20)
         return label
@@ -62,32 +63,26 @@ class MainView: UIView {
     
     //MARK: - Helpers
     func configureUI() {
+        self.addSubview(descriptionLabel)
+        descriptionLabel.anchor(top: self.safeAreaLayoutGuide.topAnchor, left: self.safeAreaLayoutGuide.leftAnchor, right: self.safeAreaLayoutGuide.rightAnchor, paddingTop: 50, paddingLeft: 50, paddingRight: 50, height: 50)
         self.addSubview(textView)
         textView.delegate = self
-        textView.anchor(top: self.safeAreaLayoutGuide.topAnchor, left: self.safeAreaLayoutGuide.leftAnchor,  right: self.safeAreaLayoutGuide.rightAnchor, paddingTop: 80, paddingLeft: 20, paddingRight: 20, height: 100)
+        textView.anchor(top: self.descriptionLabel.bottomAnchor, left: self.safeAreaLayoutGuide.leftAnchor,  right: self.safeAreaLayoutGuide.rightAnchor, paddingTop: 50, paddingLeft: 50, paddingRight: 50, height: 100)
         self.addSubview(convertButton)
         convertButton.anchor(top: textView.bottomAnchor, left: self.safeAreaLayoutGuide.leftAnchor, right: self.safeAreaLayoutGuide.rightAnchor, paddingTop: 50, paddingLeft: 50, paddingRight: 50, height: 50)
-        
     }
     
     //MARK: - Selectors
     @objc func tappedConvertButton() {
         let trimmingCharatersText = textView.text.trimmingCharacters(in: .whitespaces)
-        
+        // 文字が入力されていなかったらエラーを表示させる
         if textView.textColor == .white && textView.text == "文字を入力してください"
         || trimmingCharatersText == "" {
-            
             delegate?.showAlert()
-            return
-            
         } else {
-            
             delegate?.convertToHiragana()
-            
         }
     }
-    
-    
     
 }
 

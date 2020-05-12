@@ -8,8 +8,11 @@
 
 import UIKit
 
+// MARK: - Protocols
 protocol FirstViewDelegate {
+    
     func goToNextView()
+    
 }
 
 class FirstView: UIView {
@@ -48,7 +51,6 @@ class FirstView: UIView {
     
     // MARK: Helpers
     func configureUI(){
-        
         let stack = UIStackView(arrangedSubviews: [titleLabel, startButton])
         stack.axis = .vertical
         stack.spacing = 200
@@ -58,7 +60,6 @@ class FirstView: UIView {
     
     //MARK: Selectors
     @objc func getStrated() {
-        print("hey")
         delegate?.goToNextView()
     }
     
